@@ -1,5 +1,7 @@
 import "@/style/global.css";
 import Header from "@/components/Header/header";
+// import Banner from "@/components/Banner/Banner2";
+
 
 export default function RootLayout({ children }) {
     return (
@@ -7,6 +9,8 @@ export default function RootLayout({ children }) {
             <body>
                 <Header />  {/* Mantém aqui se for um Server Component */}
                 {children}
+
+                {/* <Banner /> */}
 
             </body>
         </html>
