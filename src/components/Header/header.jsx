@@ -3,11 +3,11 @@ import React from 'react';
 
 const Header = () => {
     return (
-        <header className="bg-[#06265D] w-full">
-            <div className="flex justify-between items-center py-4 max-w-screen-xl w-full mx-auto px-0">
+        <header className="bg-[#06265D] w-full ">
+            <div className="flex justify-between items-center py-4 max-w-screen-xl w-full mx-auto px-0 ">
                 {/* Logo no canto esquerdo */}
                 <div className="w-20 ml-0"> 
-                    <Image src="/Logo1.png" width={80} height={50} alt="Logo" priority className="w-full h-auto" />
+                    <Image src="/Logo1.png" width={80} height={50} alt="Logo" priority className="w-full h-auto ml- " />
                 </div>
 
                 {/* Menu no canto direito */}
