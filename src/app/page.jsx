@@ -1,8 +1,12 @@
+import Banner from "@/components/Banner/banner2";
+
 export default function Page() {
     return (
+
         <div>
-            {/* Conteúdo da página */}
-            <h2>Minha Página</h2>
+                <Banner />
+
         </div>
+       
     );
 }

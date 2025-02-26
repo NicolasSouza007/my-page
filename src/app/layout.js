@@ -1,6 +1,7 @@
 import "@/style/global.css";
 import Header from "@/components/Header/header";
-import Banner from "@/components/Banner/banner2";
+import Footer from "@/components/Footer/footer";
+
 
 export default function RootLayout({ children }) {
     return (
@@ -8,8 +9,13 @@ export default function RootLayout({ children }) {
             <body>
                 <Header />  {/* Mantém aqui se for um Server Component */}
                 {children}  {/* Exibe o conteúdo dinâmico aqui */}
-                <Banner />  Mantém aqui se for um Server Component
+                 {/* Mantém aqui se for um Server Component */}
+                 <div className="min-h-screen flex flex-col">
+            <main className="flex-grow"></main>
+            <Footer />
+        </div>   
             </body>
+            
         </html>
     );
 }
