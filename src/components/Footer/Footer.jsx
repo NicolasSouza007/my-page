@@ -16,7 +16,7 @@ const Footer = () => {
               <img
                 src="/img/whats.png"
                 alt="WhatsApp"
-                className="w-[40px] h-[40px] transition-transform duration-200 ease-in hover:scale-110 p-1"
+                className="w-[20px] h-[20px] transition-transform duration-200 ease-in hover:scale-110 p-1"
               />
             </a>
           </div>
@@ -33,7 +33,7 @@ const Footer = () => {
                 <img
                   src="/img/Instagram.png"
                   alt="Instagram"
-                  className="w-[40px] h-[40px] transition-transform duration-200 ease-in hover:scale-110 p-1"
+                  className="w-[25px] h-[25px] transition-transform duration-200 ease-in hover:scale-110 p-1"
                 />
               </a>
               <a
@@ -44,21 +44,21 @@ const Footer = () => {
                 <img
                   src="/img/whats.png"
                   alt="WhatsApp"
-                  className="w-[40px] h-[40px] transition-transform duration-200 ease-in hover:scale-110 p-1"
+                  className="w-[25px] h-[25px] transition-transform duration-200 ease-in hover:scale-110 p-1"
                 />
               </a>
               <a href="https://pinformatica.com" target="_blank" rel="noopener noreferrer">
                 <img
                   src="/img/WhatsApp_Image_2025-02-03_at_13.26.47-removebg-preview.png"
                   alt="Site"
-                  className="w-[40px] h-[40px] transition-transform duration-200 ease-in hover:scale-110 p-1"
+                  className="w-[25px] h-[25px] transition-transform duration-200 ease-in hover:scale-110 p-1"
                 />
               </a>
               <a href="https://www.youtube.com/@pwpsys" target="_blank" rel="noopener noreferrer">
                 <img
                   src="/img/youtube.png"
                   alt="YouTube"
-                  className="w-[40px] h-[40px] transition-transform duration-200 ease-in hover:scale-110 p-1"
+                  className="w-[25px] h-[25x] transition-transform duration-200 ease-in hover:scale-110 p-1"
                 />
               </a>
             </div>
@@ -75,7 +75,7 @@ const Footer = () => {
               <img
                 src="/img/whats.png"
                 alt="WhatsApp"
-                className="w-[40px] h-[40px] transition-transform duration-200 ease-in hover:scale-110 p-1"
+                className="w-[20px] h-[20px] transition-transform duration-200 ease-in hover:scale-110 p-1"
               />
             </a>
           </div>
