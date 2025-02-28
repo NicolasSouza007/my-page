@@ -26,4 +26,14 @@ body {
 
 html, body {
   height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  min-height: 100vh; /* Garante que o body ocupe toda a altura */
+}
+
+main {
+  flex-grow: 1; /* Faz o conteúdo crescer e empurra o footer para o final */
 }
