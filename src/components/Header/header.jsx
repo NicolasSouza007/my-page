@@ -6,16 +6,16 @@ const Header = () => {
     return (
         <header className="bg-[#06265D] w-full">
             <div className="flex justify-between items-center py-4 max-w-screen-xl mx-auto px-4">
+                
                 {/* Logo no canto esquerdo com link para a página inicial */}
-                <div className="w-20">
+                <div className="relative w-20 h-12">
                     <Link href="/">
                         <Image 
                             src="/Logo1.png" 
-                            width={80} 
-                            height={50} 
                             alt="Logo" 
+                            fill 
                             priority 
-                            className="w-full h-auto cursor-pointer"
+                            className="object-contain cursor-pointer"
                         />
                     </Link>
                 </div>
