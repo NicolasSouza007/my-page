@@ -12,7 +12,7 @@ const nunito = Nunito({
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="pt-BR" className={nunito.variable}> {/* <-- Aqui está o ajuste! */}
+    <html lang="pt-BR" className={nunito.variable}>
       <body className="flex flex-col min-h-screen font-sans">
         <Header />
         <main className="flex-grow">{children}</main>
@@ -21,4 +21,5 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
 

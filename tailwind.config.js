@@ -1,16 +1,12 @@
-// tailwind.config.js
-module.exports = {
+  module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
       fontFamily: {
-        nunito: ['var(--font-nunito)', 'sans-serif'],
-        sans: ['var(--font-nunito)', 'sans-serif'], // sobrescreve padrão do Tailwind
+        sans: ['var(--font-nunito)', 'sans-serif'],
+        nunito: ['var(--font-nunito)', 'sans-serif'], // Pode ser útil, mas não obrigatório
       },
     },
   },
   plugins: [],
-};
-
-
-
+  };

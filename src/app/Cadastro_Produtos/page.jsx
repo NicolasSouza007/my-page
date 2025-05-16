@@ -3,6 +3,10 @@
 import { useState } from 'react';
 import Link from 'next/link';
 
+import Sidebar from '@/components/Sidebar/sidebar';
+import ImageModal from 'src/components/ImageModal/ImageModal';
+
+
 export default function Cadastro_Produtos() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalImage, setModalImage] = useState('');
@@ -17,14 +21,21 @@ export default function Cadastro_Produtos() {
     setModalImage('');
   };
 
+  const relatedLinks = [
+    { href: '/Cadastros', label: 'Cadastro de Cliente Pessoa Física' },
+    { href: '/passos/rejeicao-660', label: 'Como Cadastrar um cliente Pessoa Juridica' },
+    { href: '/passos/rejeicao-772', label: 'Como cadastrar uma Conta a pagar' },
+    { href: '/passos/rejeicao-909', label: 'Como Cadastrar uma Conta a Receber' },
+  ];
+
   return (
-    <div className="flex flex-row font-nunito"> {/* <- Aplicando a fonte aqui */}
+    <div className="flex flex-row font-nunito">
       {/* Conteúdo principal */}
       <div className="w-3/4 p-6">
-        <h1 className="text-3xl mb-4">Como Realizar Cadastro de Produtos</h1>
+        <h1 className="text-3xl mb-5">Como Realizar Cadastro de Produtos</h1>
 
         <iframe
-          className="mb-5"
+          className="mb-6"
           width="560"
           height="315"
           src="https://www.youtube.com/embed/xC3u4wuDvpg"
@@ -32,7 +43,9 @@ export default function Cadastro_Produtos() {
           allowFullScreen
         ></iframe>
 
-        <p className="mb-5">
+        {/* ... (todo o conteúdo e imagens continuam iguais) */}
+
+        <p className="mb-6 text-xl">
           1° Para realizar o cadastro de produtos basta clicar em cadastro e logo em seguida clicar em produtos
         </p>
         <img
@@ -44,7 +57,7 @@ export default function Cadastro_Produtos() {
           onClick={() => openModal('/img/cadastro_produtos.png')}
         />
 
-        <p className="mb-5">
+        <p className="mb-6 text-xl">
           2° Após clicar em produtos, você será redirecionado para a tela de cadastro de produtos
         </p>
         <img
@@ -56,7 +69,7 @@ export default function Cadastro_Produtos() {
           onClick={() => openModal('/img/cadastro_produtos2.png')}
         />
 
-        <p className="mb-5">3° Clique em cadastrar</p>
+        <p className="mb-6 text-xl">3° Clique em cadastrar</p>
         <img
           src="/img/Cadastrar.png"
           alt="Cadastrar"
@@ -66,7 +79,7 @@ export default function Cadastro_Produtos() {
           onClick={() => openModal('/img/Cadastrar.png')}
         />
 
-        <p className="mb-5">4° Após clicar em cadastrar, você será redirecionado para a tela de cadastro de produtos</p>
+        <p className="mb-6 text-xl">4° Após clicar em cadastrar, você será redirecionado para a tela de cadastro de produtos</p>
         <p className="mb-5 font-bold">
           Obs: Os campos que contem uma Bolinha em amarelo significa que é um campo Obrigatório a ser preenchido.
         </p>
@@ -84,13 +97,13 @@ export default function Cadastro_Produtos() {
         <img
           src="/img/Cadastro_produtos3.png"
           alt="Cadastro Produtos"
-          className="mb-5 cursor-pointer"
+          className="mb-6 cursor-pointer"
           width="500"
           height="500"
           onClick={() => openModal('/img/Cadastro_produtos3.png')}
         />
 
-        <p className="mb-5">
+        <p className="mb-6 text-xl">
           5° Após preencher todos os campos obrigatórios, clique em Salvar, o sistema vai trazer essa mensagem
         </p>
         <img
@@ -102,7 +115,7 @@ export default function Cadastro_Produtos() {
           onClick={() => openModal('/img/Produto_Salvo.png')}
         />
 
-        <p className="mb-5">6° Os produtos cadastrados vão se encontrar na listagem</p>
+        <p className="mb-6 text-xl">6° Os produtos cadastrados vão se encontrar na listagem</p>
         <img
           src="/img/Listagem_produtos.png"
           alt="Listagem Produtos"
@@ -112,70 +125,12 @@ export default function Cadastro_Produtos() {
           onClick={() => openModal('/img/Listagem_produtos.png')}
         />
       </div>
+      
 
-      {/* Menu lateral à direita */}
-      <div className="w-1/4 p-6 sticky top-0 h-[600px] overflow-auto bg-gray-100">
-        <h2 className="text-xl font-bold mb-4">Artigos Relacionados</h2>
-        <ul className="space-y-3 text-sm">
-          <li>
-            <Link href="/Cadastros" className="text-blue-700 hover:underline">
-              Cadastro de Cliente Pessoa Física
-            </Link>
-          </li>
-          <li>
-            <Link href="/passos/rejeicao-660" className="text-blue-700 hover:underline">
-              👁️ Rejeição 660: CFOP de Combustível e não informado grupo de combustível da NF-e
-            </Link>
-          </li>
-          <li>
-            <Link href="/passos/rejeicao-772" className="text-blue-700 hover:underline">
-              👁️ Rejeição 772: Operação Interestadual e UF de destino igual à UF de origem
-            </Link>
-          </li>
-          <li>
-            <Link href="/passos/rejeicao-909" className="text-blue-700 hover:underline">
-              👁️ Rejeição 909: Obrigatório o preenchimento do grupo de UF de origem do combustível
-            </Link>
-          </li>
-          <li>
-            <Link href="/passos/rejeicao-567" className="text-blue-700 hover:underline">
-              👁️ Rejeição 567: NF-e de Devolução com Valor do ICMS da UF Destino Superior à NF-e Devolvida
-            </Link>
-          </li>
-          <li>
-            <Link href="/passos/rejeicao-354" className="text-blue-700 hover:underline">
-              👁️ Rejeição 354: Informado grupo de devolução de tributos para NF-e que não tem finalidade de devolução
-            </Link>
-          </li>
-          <li>
-            <Link href="/passos/rejeicao-930" className="text-blue-700 hover:underline">
-              👁️ Rejeição 930: CST com benefício fiscal e não informado o código de benefício fiscal
-            </Link>
-          </li>
-        </ul>
-      </div>
+      {/* Sidebar com links relacionados */}
+      <Sidebar title="Artigos Relacionados" links={relatedLinks} />
 
-      {/* Modal */}
-      {isModalOpen && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
-          onClick={closeModal}
-        >
-          <div className="relative">
-            <button
-              onClick={closeModal}
-              className="absolute top-2 right-2 text-white text-3xl font-bold"
-            >
-              &times;
-            </button>
-            <img
-              src={modalImage}
-              alt="Imagem Ampliada"
-              className="max-w-full max-h-[90vh] rounded-lg shadow-lg"
-            />
-          </div>
-        </div>
-      )}
+      <ImageModal isOpen={isModalOpen} imageSrc={modalImage} onClose={closeModal} />
     </div>
   );
 }
