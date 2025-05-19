@@ -5,7 +5,8 @@ import Link from 'next/link';
 
 import Sidebar from '@/components/Sidebar/sidebar';
 import ImageModal from 'src/components/ImageModal/ImageModal';
-
+import { InstructionStep } from '@/components/InstructionStep/InstructionStep';
+// importe o novo componente
 
 export default function Cadastro_Produtos() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -43,43 +44,33 @@ export default function Cadastro_Produtos() {
           allowFullScreen
         ></iframe>
 
-        {/* ... (todo o conteúdo e imagens continuam iguais) */}
-
-        <p className="mb-6 text-xl">
-          1° Para realizar o cadastro de produtos basta clicar em cadastro e logo em seguida clicar em produtos
-        </p>
-        <img
+        <InstructionStep
+          texto="1° Para realizar o cadastro de produtos basta clicar em cadastro e logo em seguida clicar em produtos"
           src="/img/cadastro_produtos.png"
           alt="Cadastro Produtos"
-          className="mb-5 cursor-pointer"
-          width="270"
-          height="270"
-          onClick={() => openModal('/img/cadastro_produtos.png')}
+          width={270}
+          height={270}
+          openModal={openModal}
         />
 
-        <p className="mb-6 text-xl">
-          2° Após clicar em produtos, você será redirecionado para a tela de cadastro de produtos
-        </p>
-        <img
+        <InstructionStep
+          texto="2° Após clicar em produtos, você será redirecionado para a tela de cadastro de produtos"
           src="/img/cadastro_produtos2.png"
           alt="Cadastro Produtos"
-          className="mb-5 cursor-pointer"
-          width="500"
-          height="500"
-          onClick={() => openModal('/img/cadastro_produtos2.png')}
+          openModal={openModal}
         />
 
-        <p className="mb-6 text-xl">3° Clique em cadastrar</p>
-        <img
+        <InstructionStep
+          texto="3° Clique em cadastrar"
           src="/img/Cadastrar.png"
           alt="Cadastrar"
-          className="mb-5 cursor-pointer"
-          width="500"
-          height="500"
-          onClick={() => openModal('/img/Cadastrar.png')}
+          openModal={openModal}
         />
 
-        <p className="mb-6 text-xl">4° Após clicar em cadastrar, você será redirecionado para a tela de cadastro de produtos</p>
+        <InstructionStep
+          texto="4° Após clicar em cadastrar, você será redirecionado para a tela de cadastro de produtos"
+        />
+
         <p className="mb-5 font-bold">
           Obs: Os campos que contem uma Bolinha em amarelo significa que é um campo Obrigatório a ser preenchido.
         </p>
@@ -94,39 +85,27 @@ export default function Cadastro_Produtos() {
           </ul>
         </div>
 
-        <img
+        <InstructionStep
           src="/img/Cadastro_produtos3.png"
           alt="Cadastro Produtos"
-          className="mb-6 cursor-pointer"
-          width="500"
-          height="500"
-          onClick={() => openModal('/img/Cadastro_produtos3.png')}
+          openModal={openModal}
         />
 
-        <p className="mb-6 text-xl">
-          5° Após preencher todos os campos obrigatórios, clique em Salvar, o sistema vai trazer essa mensagem
-        </p>
-        <img
+        <InstructionStep
+          texto="5° Após preencher todos os campos obrigatórios, clique em Salvar, o sistema vai trazer essa mensagem"
           src="/img/Produto_Salvo.png"
           alt="Produto Salvo"
-          className="mb-5 cursor-pointer"
-          width="500"
-          height="500"
-          onClick={() => openModal('/img/Produto_Salvo.png')}
+          openModal={openModal}
         />
 
-        <p className="mb-6 text-xl">6° Os produtos cadastrados vão se encontrar na listagem</p>
-        <img
+        <InstructionStep
+          texto="6° Os produtos cadastrados vão se encontrar na listagem"
           src="/img/Listagem_produtos.png"
           alt="Listagem Produtos"
-          className="mb-5 cursor-pointer"
-          width="500"
-          height="500"
-          onClick={() => openModal('/img/Listagem_produtos.png')}
+          openModal={openModal}
         />
       </div>
       
-
       {/* Sidebar com links relacionados */}
       <Sidebar title="Artigos Relacionados" links={relatedLinks} />
 
