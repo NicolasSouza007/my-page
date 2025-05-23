@@ -47,7 +47,7 @@ export default function Cadastro_Produtos() {
 
         <InstructionStep
           texto="1° Para realizar o cadastro de Pessoa Física basta clicar em cadastro e logo em seguida clicar em Clientes"
-          src="/img/cadastro_produtos.png"
+          src="/img/Cadastrar_cliente1.png"
           alt="Cadastro Produtos"
           width={270}
           height={270}
@@ -56,8 +56,8 @@ export default function Cadastro_Produtos() {
 
         <InstructionStep
           texto="2° Após clicar em clientes, você será redirecionado para a tela de Clientes"
-          src="/img/cadastro_produtos2.png"
-          alt="Cadastro Produtos"
+          src="/img/LISTAGEM_CLIENTES.png"
+          alt="Listagem Clientes"
           openModal={openModal}
         />
 
@@ -89,21 +89,21 @@ export default function Cadastro_Produtos() {
         </div>
 
         <InstructionStep
-          src="/img/Cadastro_produtos3.png"
+          src="/img/TELA_CADASTRO.png"
           alt="Cadastro Produtos"
           openModal={openModal}
         />
 
         <InstructionStep
           texto="5° Após preencher todos os campos obrigatórios, clique em Salvar, o sistema vai trazer essa mensagem"
-          src="/img/Produto_Salvo.png"
+          src="/img/CADASTRO_SUCESSO.png"
           alt="Produto Salvo"
           openModal={openModal}
         />
 
         <InstructionStep
           texto="6° Os Clientes cadastrados vão se encontrar na listagem"
-          src="/img/Listagem_produtos.png"
+          src="/img/LISTAGEM_CLIENTES2.png"
           alt="Listagem Produtos"
           openModal={openModal}
         />

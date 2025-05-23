@@ -23,7 +23,7 @@ export default function Cadastro_Produtos() {
   };
 
   const relatedLinks = [
-    { href: '/Cadastros', label: 'Cadastro de Cliente Pessoa Física' },
+    { href: '/Cadastro_PF', label: 'Cadastro de Cliente Pessoa Física' },
     { href: '/passos/rejeicao-660', label: 'Como Cadastrar um cliente Pessoa Juridica' },
     { href: '/passos/rejeicao-772', label: 'Como cadastrar uma Conta a pagar' },
     { href: '/passos/rejeicao-909', label: 'Como Cadastrar uma Conta a Receber' },
