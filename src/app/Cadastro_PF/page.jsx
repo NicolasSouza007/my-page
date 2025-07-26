@@ -1,14 +1,14 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
+
 
 import Sidebar from '@/components/Sidebar/sidebar';
 import ImageModal from 'src/components/ImageModal/ImageModal';
 import { InstructionStep } from '@/components/InstructionStep/InstructionStep';
 // importe o novo componente
 
-export default function Cadastro_Produtos() {
+export default function Cadastro_pf() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalImage, setModalImage] = useState('');
 

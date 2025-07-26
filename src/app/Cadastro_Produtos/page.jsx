@@ -8,7 +8,7 @@ import ImageModal from 'src/components/ImageModal/ImageModal';
 import { InstructionStep } from '@/components/InstructionStep/InstructionStep';
 // importe o novo componente
 
-export default function Cadastro_Produtos() {
+export default function Cadastro_PF() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalImage, setModalImage] = useState('');
 
