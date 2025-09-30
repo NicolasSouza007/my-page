@@ -1,27 +1,51 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "target": "es5", // ou "esnext", "es6", etc.
+    "module": "esnext", // ou "commonjs", etc.
+    "moduleResolution": "node",
     "allowJs": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        "./src/*"
+      ] // Permite imports relativos a partir da pasta src
+    },
+    "types": [
+      "node" // Adiciona tipos para o ambiente Node.js
+    ],
+    "lib": [
+      "es6",
+      "dom"
+    ] // Adiciona tipos para a API do navegador
+    ,
     "skipLibCheck": true,
-    "strict": true,
+    "strict": false,
     "noEmit": true,
+    "incremental": true,
     "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
     "plugins": [
       {
         "name": "next"
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
-    }
+      "@/": ["./src/"]
+    },
+   
+      "forceConsistentCasingInFileNames": true
+  
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "src/**/*",
+    ".next/types/**/*.ts"
+  ], // Inclui os arquivos de origem e o arquivo next-env.d.ts
+  "exclude": [
+    "node_modules"
+  ]
 }
