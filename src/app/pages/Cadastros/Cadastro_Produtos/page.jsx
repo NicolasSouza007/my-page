@@ -1,16 +1,16 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Link from 'next/link';
+import { useState } from "react";
+import Link from "next/link";
 
-import Sidebar from '@/components/Sidebar/sidebar';
-import ImageModal from 'src/components/ImageModal/ImageModal';
-import { InstructionStep } from '@/components/InstructionStep/InstructionStep';
+import Sidebar from "@/components/Sidebar/sidebar";
+import ImageModal from "src/components/ImageModal/ImageModal";
+import { InstructionStep } from "@/components/InstructionStep/InstructionStep";
 // importe o novo componente
 
 export default function Cadastro_PF() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [modalImage, setModalImage] = useState('');
+  const [modalImage, setModalImage] = useState("");
 
   const openModal = (src) => {
     setModalImage(src);
@@ -19,14 +19,20 @@ export default function Cadastro_PF() {
 
   const closeModal = () => {
     setIsModalOpen(false);
-    setModalImage('');
+    setModalImage("");
   };
 
   const relatedLinks = [
-    { href: '/Cadastro_PF', label: 'Cadastro de Cliente Pessoa Física' },
-    { href: '/passos/rejeicao-660', label: 'Como Cadastrar um cliente Pessoa Juridica' },
-    { href: '/passos/rejeicao-772', label: 'Como cadastrar uma Conta a pagar' },
-    { href: '/passos/rejeicao-909', label: 'Como Cadastrar uma Conta a Receber' },
+    { href: "/Cadastro_PF", label: "Cadastro de Cliente Pessoa Física" },
+    {
+      href: "/passos/rejeicao-660",
+      label: "Como Cadastrar um cliente Pessoa Juridica",
+    },
+    { href: "/passos/rejeicao-772", label: "Como cadastrar uma Conta a pagar" },
+    {
+      href: "/passos/rejeicao-909",
+      label: "Como Cadastrar uma Conta a Receber",
+    },
   ];
 
   return (
@@ -46,7 +52,7 @@ export default function Cadastro_PF() {
 
         <InstructionStep
           texto="1° Para realizar o cadastro de produtos basta clicar em cadastro e logo em seguida clicar em produtos"
-          src="/img/cadastro_produtos.png"
+          src="/img/Produto/cadastro_produtos.png"
           alt="Cadastro Produtos"
           width={270}
           height={270}
@@ -55,24 +61,23 @@ export default function Cadastro_PF() {
 
         <InstructionStep
           texto="2° Após clicar em produtos, você será redirecionado para a tela de cadastro de produtos"
-          src="/img/cadastro_produtos2.png"
+          src="/img/Produto/cadastro_produtos2.png"
           alt="Cadastro Produtos"
           openModal={openModal}
         />
 
         <InstructionStep
           texto="3° Clique em cadastrar"
-          src="/img/Cadastrar.png"
+          src="/img/Produto/Cadastrar.png"
           alt="Cadastrar"
           openModal={openModal}
         />
 
-        <InstructionStep
-          texto="4° Após clicar em cadastrar, você será redirecionado para a tela de cadastro de produtos"
-        />
+        <InstructionStep texto="4° Após clicar em cadastrar, você será redirecionado para a tela de cadastro de produtos" />
 
         <p className="mb-5 font-bold">
-          Obs: Os campos que contem uma Bolinha em amarelo significa que é um campo Obrigatório a ser preenchido.
+          Obs: Os campos que contem uma Bolinha em amarelo significa que é um
+          campo Obrigatório a ser preenchido.
         </p>
 
         <div className="mb-5">
@@ -86,30 +91,34 @@ export default function Cadastro_PF() {
         </div>
 
         <InstructionStep
-          src="/img/Cadastro_produtos3.png"
+          src="/img/Produto/Cadastro_produtos3.png"
           alt="Cadastro Produtos"
           openModal={openModal}
         />
 
         <InstructionStep
           texto="5° Após preencher todos os campos obrigatórios, clique em Salvar, o sistema vai trazer essa mensagem"
-          src="/img/Produto_Salvo.png"
+          src="/img/Produto/Produto_Salvo.png"
           alt="Produto Salvo"
           openModal={openModal}
         />
 
         <InstructionStep
           texto="6° Os produtos cadastrados vão se encontrar na listagem"
-          src="/img/Listagem_produtos.png"
+          src="/img/Produto/Listagem_produtos.png"
           alt="Listagem Produtos"
           openModal={openModal}
         />
       </div>
-      
+
       {/* Sidebar com links relacionados */}
       <Sidebar title="Artigos Relacionados" links={relatedLinks} />
 
-      <ImageModal isOpen={isModalOpen} imageSrc={modalImage} onClose={closeModal} />
+      <ImageModal
+        isOpen={isModalOpen}
+        imageSrc={modalImage}
+        onClose={closeModal}
+      />
     </div>
   );
 }
