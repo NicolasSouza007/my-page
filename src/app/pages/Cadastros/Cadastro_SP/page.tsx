@@ -1,14 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
-
 import Sidebar from "@/components/Sidebar/Sidebar";
 import ImageModal from "src/components/ImageModal/ImageModal";
 import { InstructionStep } from "@/components/InstructionStep/InstructionStep";
-// importe o novo componente
 
-export default function Cadastro_PF() {
+export default function Cadastro_pf() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalImage, setModalImage] = useState("");
 
@@ -25,19 +22,20 @@ export default function Cadastro_PF() {
   const relatedLinks = [
     {
       href: "/pages/Cadastros/Cadastro_PF",
-      label: "Cadastro de Cliente Pessoa Física",
+      label: "Como Cadastrar um Cliente Pessoa Fisica",
     },
     {
       href: "/pages/Cadastros/Cadastro_PJ",
-      label: "Como Cadastrar um cliente Pessoa Juridica",
+      label: "Como Cadastrar um Cliente pessoa Juridica",
+    },
+    { href: "/pages/Cadastros/Cadastr_FD", label: "Como cadastrar Fornecedor" },
+    {
+      href: "/passos/rejeicao-909",
+      label: "Como cadastrar Marcas ",
     },
     {
-      href: "/pages/Cadastros/Cadastro_SP",
-      label: "Como cadastrar um cliente Simplificado",
-    },
-    {
-      href: "/pages/Cadastros/Cadastro_FD",
-      label: "Como Cadastrar um Fornecedor",
+      href: "/pages/Cadastros/Cadastro_Produtos",
+      label: "Como Cadastrar um Produto",
     },
   ];
 
@@ -45,7 +43,9 @@ export default function Cadastro_PF() {
     <div className="flex flex-row font-nunito">
       {/* Conteúdo principal */}
       <div className="w-3/4 p-6">
-        <h1 className="text-3xl mb-5">Como Realizar Cadastro de Produtos</h1>
+        <h1 className="text-3xl mb-5">
+          Como Realizar Cadastro de Pessoa Simplificada
+        </h1>
 
         <iframe
           className="mb-6"
@@ -57,8 +57,8 @@ export default function Cadastro_PF() {
         ></iframe>
 
         <InstructionStep
-          texto="1° Para realizar o cadastro de produtos basta clicar em cadastro e logo em seguida clicar em produtos"
-          src="/img/Produto/cadastro_produtos.png"
+          texto="1° Para realizar o cadastro de Pessoa Física basta clicar em cadastro e logo em seguida clicar em Clientes"
+          src="/img/Clientes/Cadastrar_cliente1.png"
           alt="Cadastro Produtos"
           width={270}
           height={270}
@@ -66,20 +66,20 @@ export default function Cadastro_PF() {
         />
 
         <InstructionStep
-          texto="2° Após clicar em produtos, você será redirecionado para a tela de cadastro de produtos"
-          src="/img/Produto/cadastro_produtos2.png"
-          alt="Cadastro Produtos"
+          texto="2° Após clicar em clientes, você será redirecionado para a tela de Clientes"
+          src="/img/Clientes/Listagem_Clientes.png"
+          alt="Listagem Clientes"
           openModal={openModal}
         />
 
         <InstructionStep
           texto="3° Clique em cadastrar"
-          src="/img/Produto/Cadastrar.png"
+          src="/img/Clientes/Cadastrar.png"
           alt="Cadastrar"
           openModal={openModal}
         />
 
-        <InstructionStep texto="4° Após clicar em cadastrar, você será redirecionado para a tela de cadastro de produtos" />
+        <InstructionStep texto="4° Após clicar em cadastrar, você será redirecionado para a tela de cadastro de Clientes" />
 
         <p className="mb-5 font-bold">
           Obs: Os campos que contem uma Bolinha em amarelo significa que é um
@@ -89,29 +89,32 @@ export default function Cadastro_PF() {
         <div className="mb-5">
           <strong>Campos Obrigatórios:</strong>
           <ul className="list-disc pl-5">
-            <li>Nome do Produto</li>
-            <li>Preço de Venda</li>
-            <li>Unidade de Medida</li>
-            <li>NCM</li>
+            <li>Nome do Cliente</li>
+            <li>Cep</li>
+            <li>Estado</li>
+            <li>Logradouro</li>
+            <li>Bairro</li>
+            <li>Cidade</li>
           </ul>
         </div>
 
         <InstructionStep
-          src="/img/Produto/Cadastro_produtos3.png"
+          texto="Campos obrigatórios destacados em amarelo"
+          src="/img/Clientes/Tela_CadastroSP.png"
           alt="Cadastro Produtos"
           openModal={openModal}
         />
 
         <InstructionStep
           texto="5° Após preencher todos os campos obrigatórios, clique em Salvar, o sistema vai trazer essa mensagem"
-          src="/img/Produto/Produto_Salvo.png"
+          src="/img/Clientes/Cadastro_Sucesso.png"
           alt="Produto Salvo"
           openModal={openModal}
         />
 
         <InstructionStep
-          texto="6° Os produtos cadastrados vão se encontrar na listagem"
-          src="/img/Produto/Listagem_produtos.png"
+          texto="6° Os Clientes cadastrados vão se encontrar na listagem"
+          src="/img/Clientes/Listagem_Clientes.png"
           alt="Listagem Produtos"
           openModal={openModal}
         />

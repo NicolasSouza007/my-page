@@ -1,14 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 
 import Sidebar from "@/components/Sidebar/Sidebar";
 import ImageModal from "src/components/ImageModal/ImageModal";
 import { InstructionStep } from "@/components/InstructionStep/InstructionStep";
-// importe o novo componente
 
-export default function Cadastro_PF() {
+export default function Cadastro_PJ() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalImage, setModalImage] = useState("");
 
@@ -28,24 +26,23 @@ export default function Cadastro_PF() {
       label: "Cadastro de Cliente Pessoa Física",
     },
     {
-      href: "/pages/Cadastros/Cadastro_PJ",
-      label: "Como Cadastrar um cliente Pessoa Juridica",
-    },
-    {
       href: "/pages/Cadastros/Cadastro_SP",
       label: "Como cadastrar um cliente Simplificado",
     },
     {
-      href: "/pages/Cadastros/Cadastro_FD",
-      label: "Como Cadastrar um Fornecedor",
+      href: "/pages/Cadastros/Cadastro_PJ",
+      label: "Como cadastrar um cliente Pessoas Júridica",
+    },
+    {
+      href: "/pages/Cadastros/Cadastro_Produtos",
+      label: "Como cadastrar um produto",
     },
   ];
 
   return (
     <div className="flex flex-row font-nunito">
-      {/* Conteúdo principal */}
       <div className="w-3/4 p-6">
-        <h1 className="text-3xl mb-5">Como Realizar Cadastro de Produtos</h1>
+        <h1 className="text-3xl mb-5">Como realizar cadastro de Fornecedor</h1>
 
         <iframe
           className="mb-6"
@@ -57,29 +54,27 @@ export default function Cadastro_PF() {
         ></iframe>
 
         <InstructionStep
-          texto="1° Para realizar o cadastro de produtos basta clicar em cadastro e logo em seguida clicar em produtos"
-          src="/img/Produto/cadastro_produtos.png"
-          alt="Cadastro Produtos"
+          texto="1° Para realizar o cadastro de um Fernecedor, basta clicar em 'Cadastros' e logo em seguida clicar em Clientes"
+          src="/img/Clientes/Cadastrar_cliente1.png"
+          alt="Cadastro Cliente"
           width={270}
           height={270}
           openModal={openModal}
         />
-
         <InstructionStep
-          texto="2° Após clicar em produtos, você será redirecionado para a tela de cadastro de produtos"
-          src="/img/Produto/cadastro_produtos2.png"
-          alt="Cadastro Produtos"
+          texto="2° Após clicar em Clientes, você será redirecionado para a tela de Clientes"
+          src="/img/Clientes/Listagem_Clientes.png"
+          alt="Listagem Clientes"
           openModal={openModal}
         />
-
         <InstructionStep
-          texto="3° Clique em cadastrar"
-          src="/img/Produto/Cadastrar.png"
+          texto="3° Clique em Cadastrar"
+          src="/img/Clientes/Cadastrar.png"
           alt="Cadastrar"
           openModal={openModal}
         />
 
-        <InstructionStep texto="4° Após clicar em cadastrar, você será redirecionado para a tela de cadastro de produtos" />
+        <InstructionStep texto="4° Após clicar em cadastrar, você será redirecionado para a tela de cadastro de Clientes" />
 
         <p className="mb-5 font-bold">
           Obs: Os campos que contem uma Bolinha em amarelo significa que é um
@@ -89,35 +84,29 @@ export default function Cadastro_PF() {
         <div className="mb-5">
           <strong>Campos Obrigatórios:</strong>
           <ul className="list-disc pl-5">
-            <li>Nome do Produto</li>
-            <li>Preço de Venda</li>
-            <li>Unidade de Medida</li>
-            <li>NCM</li>
+            <li>Nome do Cliente</li>
+            <li>CNPJ</li>
+            <li>Inscrição Estadual</li>
+            <li>Cep</li>
+            <li>Estado</li>
+            <li>Logradouro</li>
+            <li>Bairro</li>
+            <li>Cidade</li>
           </ul>
         </div>
-
         <InstructionStep
-          src="/img/Produto/Cadastro_produtos3.png"
-          alt="Cadastro Produtos"
+          texto="5° Após preencher os campos obrigatórios, clique em 'Salvar' para concluir o cadastro"
+          src="/img/Clientes/Tela_CadastroFD.png"
+          alt="Tela de Cadastro de Cliente"
           openModal={openModal}
         />
-
         <InstructionStep
-          texto="5° Após preencher todos os campos obrigatórios, clique em Salvar, o sistema vai trazer essa mensagem"
-          src="/img/Produto/Produto_Salvo.png"
-          alt="Produto Salvo"
-          openModal={openModal}
-        />
-
-        <InstructionStep
-          texto="6° Os produtos cadastrados vão se encontrar na listagem"
-          src="/img/Produto/Listagem_produtos.png"
-          alt="Listagem Produtos"
+          texto="6° O sistema irá exibir uma mensagem de confirmação, indicando que o cadastro foi realizado com sucesso."
+          src="/img/Clientes/Cadastro_sucesso.png"
+          alt="Listagem de Clientes"
           openModal={openModal}
         />
       </div>
-
-      {/* Sidebar com links relacionados */}
       <Sidebar title="Artigos Relacionados" links={relatedLinks} />
 
       <ImageModal

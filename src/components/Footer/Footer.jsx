@@ -14,7 +14,7 @@ const Footer = () => {
             rel="noopener noreferrer"
           >
             <img
-              src="/img/whats.png"
+              src="/img/Icons/whats.png"
               alt="WhatsApp"
               className="w-[30px] h-[30px] transition-transform duration-200 ease-in hover:scale-110 p-1"
             />
@@ -31,7 +31,7 @@ const Footer = () => {
               rel="noopener noreferrer"
             >
               <img
-                src="/img/Instagram.png"
+                src="/img/Icons/Instagram.png"
                 alt="Instagram"
                 className="w-[30px] h-[30px] transition-transform duration-200 ease-in hover:scale-110 p-1"
               />
@@ -42,21 +42,29 @@ const Footer = () => {
               rel="noopener noreferrer"
             >
               <img
-                src="/img/whats.png"
+                src="/img/Icons/whats.png"
                 alt="WhatsApp"
                 className="w-[30px] h-[30px] transition-transform duration-200 ease-in hover:scale-110 p-1"
               />
             </a>
-            <a href="https://pinformatica.com" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://pinformatica.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
-                src="/img/WhatsApp_Image_2025-02-03_at_13.26.47-removebg-preview.png"
+                src="/img/Icons/WhatsApp_Image_2025-02-03_at_13.26.47-removebg-preview.png"
                 alt="Site"
                 className="w-[30px] h-[30px] transition-transform duration-200 ease-in hover:scale-110 p-1"
               />
             </a>
-            <a href="https://www.youtube.com/@pwpsys" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.youtube.com/@pwpsys"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
-                src="/img/youtube.png"
+                src="/img/Icons/youtube.png"
                 alt="YouTube"
                 className="w-[30px] h-[30px] transition-transform duration-200 ease-in hover:scale-110 p-1"
               />
@@ -73,7 +81,7 @@ const Footer = () => {
             rel="noopener noreferrer"
           >
             <img
-              src="/img/whats.png"
+              src="/img/Icons/whats.png"
               alt="WhatsApp"
               className="w-[30px] h-[30px] transition-transform duration-200 ease-in hover:scale-110 p-1"
             />
@@ -85,7 +93,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-  
-  
-  
