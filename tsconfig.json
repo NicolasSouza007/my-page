@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "target": "es5", // ou "esnext", "es6", etc.
-    "module": "esnext", // ou "commonjs", etc.
+    "target": "es5",
+    "module": "esnext",
     "moduleResolution": "node",
     "allowJs": true,
     "jsx": "preserve",
@@ -9,18 +9,10 @@
     "outDir": "dist",
     "baseUrl": ".",
     "paths": {
-      "*": [
-        "./src/*"
-      ] // Permite imports relativos a partir da pasta src
+      "@/*": ["src/*"]
     },
-    "types": [
-      "node" // Adiciona tipos para o ambiente Node.js
-    ],
-    "lib": [
-      "es6",
-      "dom"
-    ] // Adiciona tipos para a API do navegador
-    ,
+    "types": ["node"],
+    "lib": ["es6", "dom"],
     "skipLibCheck": true,
     "strict": false,
     "noEmit": true,
@@ -33,19 +25,8 @@
         "name": "next"
       }
     ],
-    "paths": {
-      "@/": ["./src/"]
-    },
-   
-      "forceConsistentCasingInFileNames": true
-  
+    "forceConsistentCasingInFileNames": true
   },
-  "include": [
-    "next-env.d.ts",
-    "src/**/*",
-    ".next/types/**/*.ts"
-  ], // Inclui os arquivos de origem e o arquivo next-env.d.ts
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["next-env.d.ts", "src/**/*", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
 }

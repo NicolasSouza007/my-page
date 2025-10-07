@@ -1,16 +1,14 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
+import { useState } from "react";
 
-
-import Sidebar from '@/components/Sidebar/sidebar';
-import ImageModal from 'src/components/ImageModal/ImageModal';
-import { InstructionStep } from '@/components/InstructionStep/InstructionStep';
-// importe o novo componente
+import Sidebar from "@/components/Sidebar/Sidebar";
+import ImageModal from "src/components/ImageModal/ImageModal";
+import { InstructionStep } from "@/components/InstructionStep/InstructionStep";
 
 export default function Cadastro_pf() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [modalImage, setModalImage] = useState('');
+  const [modalImage, setModalImage] = useState("");
 
   const openModal = (src) => {
     setModalImage(src);
@@ -19,22 +17,36 @@ export default function Cadastro_pf() {
 
   const closeModal = () => {
     setIsModalOpen(false);
-    setModalImage('');
+    setModalImage("");
   };
 
   const relatedLinks = [
-    { href: '/Cadastros', label: 'Como Cadastrar um Cliente Pessoa Juridica' },
-    { href: '/passos/rejeicao-660', label: 'Como Cadastrar um Cliente pessoa Simples' },
-    { href: '/passos/rejeicao-772', label: 'Como cadastrar uma Conta a pagar' },
-    { href: '/passos/rejeicao-909', label: 'Como Cadastrar uma Conta a Receber' },
-    { href: '/Cadastro_Produtos', label: 'Como Cadastrar um Produto' },
+    {
+      href: "/pages/Cadastros/Cadastro_PJ",
+      label: "Como Cadastrar um Cliente Pessoa Juridica",
+    },
+    {
+      href: "/pages/Cadastros/Cadastro_SP",
+      label: "Como Cadastrar um Cliente Simplificado",
+    },
+    {
+      href: "/pages/Cadastros/Cadastro_FD",
+      label: "Como cadastrar um Fornecedor",
+    },
+    {
+      href: "/passos/rejeicao-909",
+      label: "Como Cadastrar uma Conta a Receber",
+    },
+    { href: "/Cadastro_Produtos", label: "Como Cadastrar um Produto" },
   ];
 
   return (
     <div className="flex flex-row font-nunito">
       {/* Conteúdo principal */}
       <div className="w-3/4 p-6">
-        <h1 className="text-3xl mb-5">Como Realizar Cadastro de Pessoa Física</h1>
+        <h1 className="text-3xl mb-5">
+          Como Realizar Cadastro de Pessoa Física
+        </h1>
 
         <iframe
           className="mb-6"
@@ -47,7 +59,7 @@ export default function Cadastro_pf() {
 
         <InstructionStep
           texto="1° Para realizar o cadastro de Pessoa Física basta clicar em cadastro e logo em seguida clicar em Clientes"
-          src="/img/Cadastrar_cliente1.png"
+          src="/img/Clientes/Cadastrar_cliente1.png"
           alt="Cadastro Produtos"
           width={270}
           height={270}
@@ -56,24 +68,23 @@ export default function Cadastro_pf() {
 
         <InstructionStep
           texto="2° Após clicar em clientes, você será redirecionado para a tela de Clientes"
-          src="/img/LISTAGEM_CLIENTES.png"
+          src="/img/Clientes/Listagem_Clientes.png"
           alt="Listagem Clientes"
           openModal={openModal}
         />
 
         <InstructionStep
           texto="3° Clique em cadastrar"
-          src="/img/Cadastrar.png"
+          src="/img/Clientes/Cadastrar.png"
           alt="Cadastrar"
           openModal={openModal}
         />
 
-        <InstructionStep
-          texto="4° Após clicar em cadastrar, você será redirecionado para a tela de cadastro de Clientes"
-        />
+        <InstructionStep texto="4° Após clicar em cadastrar, você será redirecionado para a tela de cadastro de Clientes" />
 
         <p className="mb-5 font-bold">
-          Obs: Os campos que contem uma Bolinha em amarelo significa que é um campo Obrigatório a ser preenchido.
+          Obs: Os campos que contem uma Bolinha em amarelo significa que é um
+          campo Obrigatório a ser preenchido.
         </p>
 
         <div className="mb-5">
@@ -89,30 +100,34 @@ export default function Cadastro_pf() {
         </div>
 
         <InstructionStep
-          src="/img/TELA_CADASTRO.png"
+          src="/img/Clientes/Tela_CadastroPF.png"
           alt="Cadastro Produtos"
           openModal={openModal}
         />
 
         <InstructionStep
           texto="5° Após preencher todos os campos obrigatórios, clique em Salvar, o sistema vai trazer essa mensagem"
-          src="/img/CADASTRO_SUCESSO.png"
+          src="/img/Clientes/Cadastro_Sucesso.png"
           alt="Produto Salvo"
           openModal={openModal}
         />
 
         <InstructionStep
           texto="6° Os Clientes cadastrados vão se encontrar na listagem"
-          src="/img/LISTAGEM_CLIENTES2.png"
+          src="/img/Clientes/Listagem_Clientes.png"
           alt="Listagem Produtos"
           openModal={openModal}
         />
       </div>
-      
+
       {/* Sidebar com links relacionados */}
       <Sidebar title="Artigos Relacionados" links={relatedLinks} />
 
-      <ImageModal isOpen={isModalOpen} imageSrc={modalImage} onClose={closeModal} />
+      <ImageModal
+        isOpen={isModalOpen}
+        imageSrc={modalImage}
+        onClose={closeModal}
+      />
     </div>
   );
 }
