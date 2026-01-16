@@ -13,7 +13,7 @@ export default function Page() {
           Cadastros
         </a>
         <a
-          href="/Financeiro"
+          href="/pages/Financeiro"
           className="border-2 border-black rounded-xl px-10 py-4 w-72 text-center text-black no-underline transition-all duration-300 hover:bg-blue-600 hover:text-white"
         >
           Financeiro
