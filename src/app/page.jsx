@@ -1,46 +1,84 @@
 import Banner from "@/components/Banner/banner2";
 
+import {
+  FaRegFolder,
+  FaRegMoneyBillAlt,
+  FaBoxes,
+  FaBuilding,
+  FaFileInvoiceDollar,
+  FaFileAlt,
+} from "react-icons/fa";
+
 export default function Page() {
   return (
     <div>
       <Banner />
-      <div className="flex justify-center flex-wrap gap-6 p-12">
-        {/* Corrigindo o link para a página de cadastro de produtos */}
+
+      <div className="flex justify-center flex-wrap gap-10 p-12">
+        {/* Cadastros */}
         <a
           href="/pages/Cadastros"
-          className="border-2 border-black rounded-xl px-10 py-4 w-72 text-center text-black no-underline transition-all duration-300 hover:bg-blue-600 hover:text-white"
+          className="border-2 border-black rounded-xl p-6 w-72 text-black no-underline 
+                     flex items-center gap-4 hover:bg-blue-600 hover:text-white 
+                     transition-all duration-300 "
         >
-          Cadastros
+          <FaRegFolder size={32} className="min-w-[32px]" />
+          <span className="text-lg font-medium ml-8">Cadastros</span>
         </a>
+
+        {/* Financeiro */}
         <a
           href="/pages/Financeiro"
-          className="border-2 border-black rounded-xl px-10 py-4 w-72 text-center text-black no-underline transition-all duration-300 hover:bg-blue-600 hover:text-white"
+          className="border-2 border-black rounded-xl p-6 w-72 text-black no-underline 
+                     flex items-center gap-4 hover:bg-blue-600 hover:text-white 
+                     transition-all duration-300"
         >
-          Financeiro
+          <FaRegMoneyBillAlt size={32} className="min-w-[32px]" />
+          <span className="text-lg font-medium ml-8">Financeiro</span>
         </a>
+
+        {/* Estoque */}
         <a
           href="/page4"
-          className="border-2 border-black rounded-xl px-10 py-4 w-72 text-center text-black no-underline transition-all duration-300 hover:bg-blue-600 hover:text-white"
+          className="border-2 border-black rounded-xl p-6 w-72 text-black no-underline 
+                     flex items-center gap-4 hover:bg-blue-600 hover:text-white 
+                     transition-all duration-300"
         >
-          Estoque
+          <FaBoxes size={32} className="min-w-[32px]" />
+          <span className="text-lg font-medium ml-10">Estoque</span>
         </a>
+
+        {/* Dados da Empresa */}
         <a
           href="/page5"
-          className="border-2 border-black rounded-xl px-10 py-4 w-72 text-center text-black no-underline transition-all duration-300 hover:bg-blue-600 hover:text-white"
+          className="border-2 border-black rounded-xl p-6 w-72 text-black no-underline 
+                     flex items-center gap-4 hover:bg-blue-600 hover:text-white 
+                     transition-all duration-300"
         >
-          Dados da Empresa
+          <FaBuilding size={32} className="min-w-[32px]" />
+          <span className="text-lg font-medium ml-6">Dados da Empresa</span>
         </a>
+
+        {/* Faturamento */}
         <a
           href="/page6"
-          className="border-2 border-black rounded-xl px-10 py-4 w-72 text-center text-black no-underline transition-all duration-300 hover:bg-blue-600 hover:text-white"
+          className="border-2 border-black rounded-xl p-6 w-72 text-black no-underline 
+                     flex items-center gap-4 hover:bg-blue-600 hover:text-white 
+                     transition-all duration-300"
         >
-          Faturamento
+          <FaFileInvoiceDollar size={32} className="min-w-[32px]" />
+          <span className="text-lg font-medium ml-8">Faturamento</span>
         </a>
+
+        {/* Arquivos Fiscais */}
         <a
           href="/page7"
-          className="border-2 border-black rounded-xl px-10 py-4 w-72 text-center text-black no-underline transition-all duration-300 hover:bg-blue-600 hover:text-white"
+          className="border-2 border-black rounded-xl p-6 w-72 text-black no-underline 
+                     flex items-center gap-4 hover:bg-blue-600 hover:text-white 
+                     transition-all duration-300"
         >
-          Arquivos Fiscais
+          <FaFileAlt size={32} className="min-w-[32px]" />
+          <span className="text-lg font-medium ml-6">Arquivos Fiscais</span>
         </a>
       </div>
     </div>
