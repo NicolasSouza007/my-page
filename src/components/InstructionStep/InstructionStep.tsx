@@ -21,7 +21,7 @@ export function InstructionStep({
 }: InstructionStepProps) {
   return (
     <div className="mb-6">
-      {texto && <p className="mb-6 text-xl">{texto}</p>}
+      {texto && <p className="mb-6 text-xl font-inter ">{texto}</p>}
       {src && (
         <Image
           src={src}

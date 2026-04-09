@@ -23,7 +23,7 @@ export default function Page() {
                      transition-all duration-300 "
         >
           <FaRegFolder size={32} className="min-w-[32px]" />
-          <span className="text-lg font-medium ml-8">Cadastros</span>
+          <span className="text-lg font-medium ml-9">Cadastros</span>
         </a>
 
         {/* Financeiro */}
@@ -34,18 +34,18 @@ export default function Page() {
                      transition-all duration-300"
         >
           <FaRegMoneyBillAlt size={32} className="min-w-[32px]" />
-          <span className="text-lg font-medium ml-8">Financeiro</span>
+          <span className="text-lg font-medium ml-9">Financeiro</span>
         </a>
 
         {/* Estoque */}
         <a
-          href="/page4"
+          href="/pages/Estoque"
           className="border-2 border-black rounded-xl p-6 w-72 text-black no-underline 
                      flex items-center gap-4 hover:bg-blue-600 hover:text-white 
                      transition-all duration-300"
         >
           <FaBoxes size={32} className="min-w-[32px]" />
-          <span className="text-lg font-medium ml-10">Estoque</span>
+          <span className="text-lg font-medium ml-11">Estoque</span>
         </a>
 
         {/* Dados da Empresa */}

@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 
 import Sidebar from "@/components/Sidebar/Sidebar";
 import ImageModal from "src/components/ImageModal/ImageModal";
@@ -45,10 +44,17 @@ export default function Cadastro_PF() {
     <div className="flex flex-row font-nunito">
       {/* Conteúdo principal */}
       <div className="w-3/4 p-6">
-        <h1 className="text-3xl mb-5">Como Realizar Cadastro de Produtos</h1>
+        <h1 className="text-3xl mb-5 font-roboto ">
+          <strong>Como Realizar Cadastro de Produtos</strong>
+        </h1>
+
+        <h2 className="text-lg font-inter">
+          Nesse artigo iremos explicar como realizar o cadastro de produtos, de
+          forma simples e rápida
+        </h2>
 
         <iframe
-          className="mb-6"
+          className="mb-6 mt-8"
           width="560"
           height="315"
           src="https://www.youtube.com/embed/xC3u4wuDvpg"
