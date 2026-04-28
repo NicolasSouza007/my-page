@@ -23,26 +23,18 @@ export default function Cadastro_PJ() {
   const relatedLinks = [
     {
       href: "/pages/Cadastros/Cadastro_PF",
-      label: "Cadastro de Cliente Pessoa Física",
+      label: "Entrada de Estoque com Nota Fiscal",
     },
     {
       href: "/pages/Cadastros/Cadastro_SP",
-      label: "Como cadastrar um cliente Simplificado",
-    },
-    {
-      href: "/pages/Cadastros/Cadastro_PJ",
-      label: "Como cadastrar um cliente Pessoas Júridica",
-    },
-    {
-      href: "/pages/Cadastros/Cadastro_Produtos",
-      label: "Como cadastrar um produto",
+      label: "Saida de Estoque",
     },
   ];
 
   return (
     <div className="flex flex-row font-nunito">
       <div className="w-3/4 p-6">
-        <h1 className="text-3xl mb-5">Como realizar cadastro de Fornecedor</h1>
+        <h1 className="text-3xl mb-5">Como realizar uma Entrada de Estoque</h1>
 
         <iframe
           className="mb-6"
@@ -54,55 +46,47 @@ export default function Cadastro_PJ() {
         ></iframe>
 
         <InstructionStep
-          texto="1° Para realizar o cadastro de um Fernecedor, basta clicar em 'Cadastros' e logo em seguida clicar em Clientes"
-          src="/img/Clientes/Cadastrar_cliente1.png"
+          texto="1° Para realizar uma Entrada de Estoque, clica em 'Estoque'"
+          src="/img/Estoque/Estoque1.png"
           alt="Cadastro Cliente"
           width={270}
           height={270}
           openModal={openModal}
         />
         <InstructionStep
-          texto="2° Após clicar em Clientes, você será redirecionado para a tela de Clientes"
-          src="/img/Clientes/Listagem_Clientes.png"
+          texto="2° Após clicar em Estoque, clique em Cadastrar"
+          src="/img/Estoque/Estoque2.png"
           alt="Listagem Clientes"
           openModal={openModal}
         />
         <InstructionStep
-          texto="3° Clique em Cadastrar"
-          src="/img/Clientes/Cadastrar.png"
+          texto="3° Você vai ser direcionado ao formulário de cadastro de Estoque"
+          src="/img/Estoque/Estoque4.png"
           alt="Cadastrar"
           openModal={openModal}
         />
 
-        <InstructionStep texto="4° Após clicar em cadastrar, você será redirecionado para a tela de cadastro de Clientes" />
+        <InstructionStep texto="4° No formulário de Estoque preencha os campos obrigatórios" />
 
-        <p className="mb-5 font-bold">
-          Obs: Os campos que contem uma Bolinha em amarelo significa que é um
-          campo Obrigatório a ser preenchido.
-        </p>
+        <p className="mb-5 font-bold">Obs: Os campos obrigatórios são:</p>
 
         <div className="mb-5">
           <strong>Campos Obrigatórios:</strong>
           <ul className="list-disc pl-5">
-            <li>Nome do Cliente</li>
-            <li>CNPJ</li>
-            <li>Inscrição Estadual</li>
-            <li>Cep</li>
-            <li>Estado</li>
-            <li>Logradouro</li>
-            <li>Bairro</li>
-            <li>Cidade</li>
+            <li>Movimentação</li>
+            <li>CME</li>
+            <li>Motivo</li>
           </ul>
         </div>
         <InstructionStep
-          texto="5° Após preencher os campos obrigatórios, clique em 'Salvar' para concluir o cadastro"
-          src="/img/Clientes/Tela_CadastroFD.png"
+          texto="5° Após preencher os campos obrigatórios, adicione os Produtos, vai ficar dessa forma: "
+          src="/img/Estoque/Estoque5.png"
           alt="Tela de Cadastro de Cliente"
           openModal={openModal}
         />
         <InstructionStep
-          texto="6° O sistema irá exibir uma mensagem de confirmação, indicando que o cadastro foi realizado com sucesso."
-          src="/img/Clientes/Cadastro_sucesso.png"
+          texto="6° Após clicar em salvar, o sistema vai mostrar uma mensagem de confirmação de Movimentação de estoque cadastrada."
+          src="/img/Estoque/Estoque6.png"
           alt="Listagem de Clientes"
           openModal={openModal}
         />
