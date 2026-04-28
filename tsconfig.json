@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "esnext",
+    "target": "ESNext",
+    "module": "ESNext",
+    "ignoreDeprecations": "6.0",
     "moduleResolution": "node",
     "allowJs": true,
     "jsx": "preserve",
@@ -12,7 +13,7 @@
       "@/*": ["src/*"]
     },
     "types": ["node"],
-    "lib": ["es6", "dom"],
+    "lib": ["ESNext", "DOM"],
     "skipLibCheck": true,
     "strict": false,
     "noEmit": true,
@@ -20,11 +21,7 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
+    "plugins": [{ "name": "next" }],
     "forceConsistentCasingInFileNames": true
   },
   "include": ["next-env.d.ts", "src/**/*", ".next/types/**/*.ts"],
