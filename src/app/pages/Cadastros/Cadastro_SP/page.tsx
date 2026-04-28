@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Sidebar from "@/components/Sidebar/Sidebar";
-import ImageModal from "src/components/ImageModal/ImageModal";
+import ImageModal from "@/components/ImageModal/ImageModal";
 import { InstructionStep } from "@/components/InstructionStep/InstructionStep";
 
 export default function Cadastro_pf() {

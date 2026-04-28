@@ -2,7 +2,7 @@
 
 import React from "react";
 import Sidebar from "@/components/Sidebar/Sidebar";
-import ImageModal from "src/components/ImageModal/ImageModal";
+import ImageModal from "@/components/ImageModal/ImageModal";
 import { InstructionStep } from "@/components/InstructionStep/InstructionStep";
 import { useState } from "react";
 

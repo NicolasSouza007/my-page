@@ -2,8 +2,8 @@
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
-    "ignoreDeprecations": "6.0",
-    "moduleResolution": "node",
+    "ignoreDeprecations": "5.0",
+    "moduleResolution": "bundler",
     "allowJs": true,
     "jsx": "preserve",
     "sourceMap": true,
