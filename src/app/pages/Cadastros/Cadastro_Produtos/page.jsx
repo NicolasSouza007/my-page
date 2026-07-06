@@ -110,7 +110,7 @@ export default function Cadastro_PF() {
 
         <InstructionStep
           texto="5° Após preencher todos os campos obrigatórios, clique em Salvar, o sistema vai trazer essa mensagem"
-          src="/img/Produto/Produto_Salvo.png"
+          src="/img/Produto/Produto_salvo.png"
           alt="Produto Salvo"
           openModal={openModal}
         />
