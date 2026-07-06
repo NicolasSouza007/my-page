@@ -102,7 +102,7 @@ export default function Cadastro_PJ() {
         />
         <InstructionStep
           texto="6° O sistema irá exibir uma mensagem de confirmação, indicando que o cadastro foi realizado com sucesso."
-          src="/img/Clientes/Cadastro_sucesso.png"
+          src="/img/Clientes/Cadastro_Sucesso.png"
           alt="Listagem de Clientes"
           openModal={openModal}
         />
