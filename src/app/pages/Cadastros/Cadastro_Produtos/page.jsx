@@ -64,7 +64,7 @@ export default function Cadastro_PF() {
 
         <InstructionStep
           texto="1° Para realizar o cadastro de produtos basta clicar em cadastro e logo em seguida clicar em produtos"
-          src="/img/Produto/cadastro_produtos.png"
+          src="/img/Produto/Cadastro_Produtos.png"
           alt="Cadastro Produtos"
           width={270}
           height={270}
