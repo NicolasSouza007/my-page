@@ -4,7 +4,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <header className="bg-[#06265D] w-full h-24">
+    <header className="bg-[#240046] w-full h-24">
       <div className="flex justify-between items-center py-6 max-w-screen-xl mx-auto px-4">
         {/* Logo no canto esquerdo com link para a página inicial */}
         <div className="relative w-20 h-12">

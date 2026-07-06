@@ -3,7 +3,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#06265d] text-white text-center p-2 w-full mt-auto">
+    <footer className="bg-[#240046] text-white text-center p-2 w-full mt-auto">
       <div className="flex justify-around flex-wrap">
         {/* Setor Comercial */}
         <div className="flex flex-col items-center max-w-xs">

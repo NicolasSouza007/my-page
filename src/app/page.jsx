@@ -19,7 +19,7 @@ export default function Page() {
         <a
           href="/pages/Cadastros"
           className="border-2 border-black rounded-xl p-6 w-72 text-black no-underline 
-                     flex items-center gap-4 hover:bg-blue-600 hover:text-white 
+                     flex items-center gap-4 hover:bg-[#C77DFF] hover:text-white 
                      transition-all duration-300 "
         >
           <FaRegFolder size={32} className="min-w-[32px]" />
@@ -30,7 +30,7 @@ export default function Page() {
         <a
           href="/pages/Financeiro"
           className="border-2 border-black rounded-xl p-6 w-72 text-black no-underline 
-                     flex items-center gap-4 hover:bg-blue-600 hover:text-white 
+                     flex items-center gap-4 hover:bg-[#C77DFF] hover:text-white 
                      transition-all duration-300"
         >
           <FaRegMoneyBillAlt size={32} className="min-w-[32px]" />
@@ -41,7 +41,7 @@ export default function Page() {
         <a
           href="/pages/Estoque"
           className="border-2 border-black rounded-xl p-6 w-72 text-black no-underline 
-                     flex items-center gap-4 hover:bg-blue-600 hover:text-white 
+                     flex items-center gap-4 hover:bg-[#C77DFF] hover:text-white 
                      transition-all duration-300"
         >
           <FaBoxes size={32} className="min-w-[32px]" />
@@ -52,7 +52,7 @@ export default function Page() {
         <a
           href="/page5"
           className="border-2 border-black rounded-xl p-6 w-72 text-black no-underline 
-                     flex items-center gap-4 hover:bg-blue-600 hover:text-white 
+                     flex items-center gap-4 hover:bg-[#C77DFF] hover:text-white 
                      transition-all duration-300"
         >
           <FaBuilding size={32} className="min-w-[32px]" />
@@ -63,7 +63,7 @@ export default function Page() {
         <a
           href="/page6"
           className="border-2 border-black rounded-xl p-6 w-72 text-black no-underline 
-                     flex items-center gap-4 hover:bg-blue-600 hover:text-white 
+                     flex items-center gap-4 hover:bg-[#C77DFF] hover:text-white 
                      transition-all duration-300"
         >
           <FaFileInvoiceDollar size={32} className="min-w-[32px]" />
@@ -74,7 +74,7 @@ export default function Page() {
         <a
           href="/page7"
           className="border-2 border-black rounded-xl p-6 w-72 text-black no-underline 
-                     flex items-center gap-4 hover:bg-blue-600 hover:text-white 
+                     flex items-center gap-4 hover:bg-[#C77DFF] hover:text-white 
                      transition-all duration-300"
         >
           <FaFileAlt size={32} className="min-w-[32px]" />
